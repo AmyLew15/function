@@ -1,1 +1,1 @@
-# function
+This website was created as the final exploration in my Type and Interaction course at Parsons. I created a website to generate trivia games based around my current classmates. Feel free to look at my code or try out the game for yourself!
