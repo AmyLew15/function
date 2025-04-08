@@ -1,0 +1,134 @@
+:root{
+	/* Font size */
+	--size-1: 16px;
+	--size-2: 20px;
+	--size-3: 24px;
+	--size-4: 32px;
+	--size-5: 48px;
+	--size-6: 64px;
+	--size-7: 80px;
+	--size-8: 96px;
+	--size-9: 112px;
+	--size-10: 144px;
+
+	/* Main colors */
+	--black: #000000;
+	--white: #ffffff;
+	--navy: #100055;
+	--blue: #76a6f9;
+	--green: #0cb352;
+	--yellow: #ffb81f;
+	--red: #e60c2d;
+	--pink: #ec4995;
+
+	/* Fonts */
+
+	--font-1: "bitcount-prop-single-square", sans-serif;
+	--font-2: "ivymode", sans-serif;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	color: var(--blue);
+	background-color: var(--navy);
+	overscroll-behavior: none;
+}
+
+h1{
+	font-family: var(--font-1);
+	font-size: var(--size-5);
+	font-weight: 500;
+	color: var(--red);
+	line-height: var(--size-5);
+	text-align: center;
+}
+
+h2{
+	font-family: var(--font-1);
+	font-size: var(--size-3);
+	font-weight: 300;
+	color: var(--pink);
+	line-height: var(--size-4);
+	font-weight: 200;
+	text-align: center;
+}
+
+h3{
+	font-family: var(--font-2);
+	font-size: var(--size-1);
+	line-height: var(--size-2);
+	font-weight: 200;
+	text-align: center;
+}
+
+p{
+	font-family: var(--font-2);
+	font-size: var(--size-1);
+	line-height: var(--size-2);
+	letter-spacing: 1.5px;
+	font-weight: 200;
+	text-align: center;
+}
+
+#header{
+	margin-top: var(--size-1);
+	padding: var(--size-2);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	h2{
+		padding-top: var(--size-1);
+	}
+}
+
+#content{
+	p{
+		text-align: center;
+		padding-top: calc(.5*var(--size-1));
+		padding-left: var(--size-1);
+		padding-right: var(--size-1);
+	}
+}
+
+#start{
+	padding: var(--size-2);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+		align-items: center;
+}
+
+.start-button{
+	font-family: var(--font-1);
+	font-size: var(--size-3);
+	color: var(--navy);
+	background-color: var(--green);
+	border-radius: 100rem;
+	width: 300px;
+	padding: var(--size-1);
+	text-align: center;
+	justify-content: space-between;
+}
+
+.start-button:hover{
+	background-color: var(--yellow);
+	transition: 500ms ease-in-out;
+}
+
+#footer{
+	background-color: var(--pink);
+	padding: var(--size-1);
+	overflow: hidden;
+
+	h1{
+		color: var(--navy);
+		font-size: var(--size-1);
+		line-height: var(--size-3);
+	}
+}

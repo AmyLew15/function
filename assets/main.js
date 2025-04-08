@@ -1,3 +1,4 @@
+//console.log('hello,world')
 // Function to render your items
 const renderItems = (data) => {
 	// The `ul` where the items will be inserted
