@@ -15,7 +15,7 @@
 	--black: #000000;
 	--white: #ffffff;
 	--navy: #100055;
-	--blue: #76a6f9;
+	--blue: #8eb7ff;
 	--green: #0cb352;
 	--yellow: #ffb81f;
 	--red: #e60c2d;
@@ -25,6 +25,10 @@
 
 	--font-1: "bitcount-prop-single-square", sans-serif;
 	--font-2: "ivymode", sans-serif;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
 }
 
 html{
@@ -86,7 +90,7 @@ p{
 	}
 }
 
-#content{
+#instructions{
 	p{
 		text-align: center;
 		padding-top: calc(.5*var(--size-1));
@@ -110,6 +114,7 @@ p{
 	color: var(--navy);
 	background-color: var(--green);
 	border-radius: 100rem;
+	min-height: var(--size-5);
 	width: 300px;
 	padding: var(--size-1);
 	text-align: center;
@@ -119,6 +124,120 @@ p{
 .start-button:hover{
 	background-color: var(--yellow);
 	transition: 500ms ease-in-out;
+}
+
+.start-button:active{
+	transform: scale(.95);
+	opacity: .75;
+}
+
+#game{
+	font-family: var(--font-2);
+	color: var(--navy);
+	background-color: var(--yellow);
+	padding: var(--size-2);
+	margin: auto;
+	width: 95%;
+	max-width: 500px;
+	border-radius: var(--size-1);
+	box-shadow: 0 0 20px var(--navy);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--size-1);
+	position: relative;
+	opacity: 0;
+	transition: opacity .5s ease;
+}
+
+#game.show{
+	opacity: 1;
+}
+
+.close-button {
+	font-family: var(--font-1);
+	font-size: var(--size-3);
+	color: var(--navy);
+	min-height: var(--size-5);
+	position: absolute;
+	top: var(--size-1);
+	right: var(--size-1);
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.close-button:hover {
+	color: var(--red);
+	transition: color 0.3s ease;
+}
+
+.close-button:active{
+	transform: scale(.95);
+	opacity: .75;
+}
+
+#question{
+	font-size: var(--size-2);
+	font-weight: 600;
+	color: var(--red);
+	text-align: center;
+	padding: var(--size-1);
+}
+
+#options{
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-1);
+	width: 100%;
+}
+
+#options button{
+	font-size: var(--size-1);
+	letter-spacing: 1.5px;
+	min-height: var(--size-5);
+	padding: var(--size-1);
+	width: 100%;
+	border: 2px solid var(--navy);
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color .3s ease;
+}
+
+#options button:hover{
+	color: var(--green);
+}
+
+#options button:active{
+	transform: scale(.5);
+	opacity: .75;
+}
+
+#next {
+	font-family: var(--font-1);
+	font-size: var(--size-2);
+	font-weight: 500;
+	color: var(--navy);
+	background-color: var(--red);
+	padding: var(--size-1);
+	margin-top: var(--size-2);
+	text-align: center;
+	min-height: var(--size-5);
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#next:hover {
+	background-color: var(--yellow);
+	transition: background-color 0.3s ease;
+}
+
+#next:active{
+	transform: scale(.95);
+	opacity: .75;
 }
 
 #footer{

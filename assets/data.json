@@ -1,0 +1,58 @@
+[
+    {
+      "Question": "Which classmate loves a good cocktail?",
+      "Option_A": "Jonathan",
+      "Option_B": "Mia",
+      "Option_C": "Mika",
+      "Option_D": "Jenny",
+      "Answer": "Mika"
+    },
+    {
+      "Question": "Which classmate used to be allergic to pineapple?",
+      "Option_A": "Jolyn",
+      "Option_B": "Vee",
+      "Option_C": "Irene",
+      "Option_D": "Huijie",
+      "Answer": "Vee"
+    },
+    {
+      "Question": "Which classmate has 6 siblings?",
+      "Option_A": "Amely",
+      "Option_B": "Shambhavi",
+      "Option_C": "Hye Lynn",
+      "Option_D": "Jennifer",
+      "Answer": "Amely"
+    },
+    {
+      "Question": "Which classmates are married?",
+      "Option_A": "Irene and Devansh",
+      "Option_B": "Inji and Bhakti",
+      "Option_C": "Bhakti and Ishani",
+      "Option_D": "Mika and Bee",
+      "Answer": "Bhakti and Ishani"
+    },
+    {
+      "Question": "Which classmates play soccer?",
+      "Option_A": "Amy and Jenny",
+      "Option_B": "Devansh and Emma",
+      "Option_C": "Hannah and Yuting",
+      "Option_D": "Hannah and Emma",
+      "Answer": "Hannah and Emma"
+    },
+    {
+      "Question": "Which classmate is a cute Korean girl?",
+      "Option_A": "Yaxuan",
+      "Option_B": "Inji",
+      "Option_C": "Mia",
+      "Option_D": "Jonathan",
+      "Answer": "Mia"
+    },
+    {
+      "Question": "Which classmate has major cooking skills?",
+      "Option_A": "Bhakti",
+      "Option_B": "Mika",
+      "Option_C": "Opal",
+      "Option_D": "Rice",
+      "Answer": "Bhakti"
+    }
+  ]

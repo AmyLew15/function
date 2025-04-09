@@ -1,10 +1,10 @@
-<html></html>
+<html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="assets/reset.css" rel="stylesheet">
 		<link href="assets/common.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.typekit.net/wjt6dgk.css">
-		<!--<script src="assets/main.js" defer></script>-->
+		<script src="assets/main.js" defer></script>
 
 		<title>
 			MPS CD Trivia 2025
@@ -16,20 +16,28 @@
 			<h1>MPS CD Class Trivia</h1>
 			<h2>Spring 2025</h2>
 		</header>
-		<section id="content">
+
+		<section id="instructions">
 			<p>Welcome to MPS Communications Design class trivia: 2025 Edition! Ready to see if you know your classmates after spending 9 months together?</p>
 			<p>Click start to begin and no cheating!</p>
 		</section>
 		<section id="start">
-				<button class="start-button">Start</button>
+			<button class="start-button">Start</button>
 		</section>
+		<section id="game" style="display:none;">
+			<button id="close-game" class="close-button">✖</button>
+				<p id="question"> Question goes here...</p>
+					<div id="options">
+						<button id="option-a">A</button>
+						<button id="option-b">B</button>
+						<button id="option-c">C</button>
+						<button id="option-d">D</button>
+					</div>
+			<button id="next">Next</button>
+		</section>
+		<footer id="footer">
+			<h1>Typography and Interaction</h1>
+			<h1>© 2025 Created by Amy Lewis</h1>
+		</footer>
 	</body>
-	<footer id="footer">
-		<h1>
-			Typography and Interaction
-		</h1>
-		<h1>
-			© 2025 Created by Amy Lewis
-		</h1>
-	</footer>
 </html>
