@@ -24,7 +24,7 @@
 		<section id="start">
 			<button class="start-button">Start</button>
 		</section>
-		<section id="game" style="display:none;">
+		<dialog id="game" style="display:none;">
 			<button id="close-game" class="close-button">X</button>
 				<p id="question"> Question goes here...</p>
 					<div id="options">
@@ -33,8 +33,10 @@
 						<button id="option-c">C</button>
 						<button id="option-d">D</button>
 					</div>
-			<button id="next">Next</button>
-		</section>
+					<div id="progress-bar-container">
+				<div id="progress-bar"></div>
+			</div>
+		</dialog>
 		<footer id="footer">
 			<h1>Typography and Interaction</h1>
 			<h1>© 2025 Created by Amy Lewis</h1>
