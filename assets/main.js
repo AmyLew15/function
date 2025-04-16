@@ -49,7 +49,9 @@ const renderItems = (data) => {
 		button.addEventListener("click", () => {
 			const isCorrect = key === correctLetter;
 			button.style.backgroundColor = isCorrect ? "#0cb352" : "#e60c2d";
+			button.style.backgroundColor = "#8eb7ff";
 			if (isCorrect) score++;
+
 
 	//Disable answer buttons
 		Array.from(optionsContainer.children).forEach(btn => btn.disabled = true);
