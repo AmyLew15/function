@@ -3,6 +3,7 @@ const renderItems = (data) => {
 	const startButton = document.querySelector(".start-button");
 	const closeButton = document.getElementById("close-game");
 	const gameDialog = document.getElementById("game");
+	console.log(gameDialog);
 	const mainContent = document.getElementById("main-content");
 	const questionText = document.getElementById("question");
 	const optionsContainer = document.getElementById("options");
@@ -37,22 +38,46 @@ const renderItems = (data) => {
 		for (const [key, value] of Object.entries (options)) {
 		const button = document.createElement("button");
 		button.textContent = `${key.toUpperCase()}: ${value}`;
-		button.addEventListener("click",()=>{
-			const isCorrect = key ===correctLetter;
-				button.style.backgroundColor = isCorrect ? "#0cb352"; "#e60c2d";
-				if (isCorrect) score++;
+
+		button.addEventListener("click", () => {
+			const isCorrect = key === correctLetter;
+			button.style.backgroundColor = isCorrect ? "#0cb352" : "#e60c2d";
+			if (isCorrect) score++;
 
 	//Disable answer buttons
 		Array.from(optionsContainer.children).forEach(btn => btn.disabled = true);
-		}
 
 	//Auto next question
-	
+		setTimeout(() => {
+			currentQuestionIndex++;
+			if (currentQuestionIndex < data.length) {
+				showQuestion();
+			} else { 
+				endGame();
+			}
+			}, 1000);
+	});
+
+	optionsContainer.appendChild(button);
+}
+};
+
+	//Game end
+		const endGame = () => {
+		optionsContainer.innerHTML = "";
+		if (score >= 6) {
+		questionText.textContent = `Success! 🎉 You got ${score} out of ${data.length} correct.`;
+		} else {
+		questionText.textContent = `Try again! 😬 You got ${score} out of ${data.length}.`;
+	}
+};
+
 	// Start button click
 		startButton.addEventListener("click", () => {
 		mainContent.style.display = "none";
 		gameDialog.showModal ();
 		currentQuestionIndex = 0;
+		score = 0;
 		showQuestion();
 	});
 
@@ -60,9 +85,7 @@ const renderItems = (data) => {
 	closeButton.addEventListener("click", () => {
 		gameDialog.close();
 		mainContent.style.display = "flex";
-		currentQuestionIndex = 0;
 	});
-
 };
 
 // Fetch gets your (local) JSON file…

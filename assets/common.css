@@ -158,12 +158,8 @@ dialog#game {
 	justify-content: flex-start;
 	gap: var(--size-1);
 	position: relative;
-	opacity: 0;
+	display: none;
 	transition: opacity .5s ease;
-}
-
-dialog::backdrop {
-	background: var(--yellow);
 }
 
 .close-button {
