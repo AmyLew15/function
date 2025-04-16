@@ -7,12 +7,15 @@ const renderItems = (data) => {
 	const mainContent = document.getElementById("main-content");
 	const questionText = document.getElementById("question");
 	const optionsContainer = document.getElementById("options");
+	const progressBar = document.getElementById("progress-bar");
 
 	let currentQuestionIndex = 0;
 	let score = 0;
 
 	//Show Question
 	const showQuestion = () => {
+		const progress = ((currentQuestionIndex) / data.length) * 100;
+		progressBar.style.width = `${progress}%`;
 		const item = data[currentQuestionIndex];
 		const question = item.Question;
 		const options = {
@@ -65,6 +68,7 @@ const renderItems = (data) => {
 	//Game end
 		const endGame = () => {
 		optionsContainer.innerHTML = "";
+		progressBar.style.width = `100%`;
 		if (score >= 6) {
 		questionText.textContent = `Success! 🎉 You got ${score} out of ${data.length} correct.`;
 		} else {
