@@ -14,17 +14,18 @@
 	/* Main colors */
 	--black: #000000;
 	--white: #ffffff;
-	--navy: #0c0232;
-	--blue: #8eb7ff;
+	--light: #d8d8d8;
+	--navy: #0b022e;
+	--blue: #81adf9;
 	--green: #0cb352;
-	--yellow: #ffc800;
+	--yellow: #ffd230;
 	--red: #e60c2d;
 	--pink: #ff3895;
 
 	/* Fonts */
 
 	--font-1: "bitcount-prop-single-square", sans-serif;
-	--font-2: "ivymode", sans-serif;
+	--font-2: "paradroid-mono-soft", sans-serif;
 }
 
 *, *::before, *::after {
@@ -61,23 +62,9 @@ h2{
 	text-align: center;
 }
 
-h3{
-	font-family: var(--font-2);
-	font-size: var(--size-1);
-	color: var(--green);
-	line-height: var(--size-2);
-	font-weight: 500;
-	text-align: center;
-}
-
 p{
 	font-family: var(--font-2);
-	font-size: var(--size-1);
-	color: var(--white);
-	line-height: var(--size-2);
-	letter-spacing: 1.5px;
 	font-weight: 400;
-	text-align: left;
 }
 
 #header{
@@ -94,6 +81,11 @@ p{
 }
 
 #main-content{
+	font-size: var(--size-2);
+	line-height: var(--size-3);
+	color: var(--white);
+	padding: var(--size-2);
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -103,20 +95,15 @@ p{
 }
 
 #instructions{
-	padding: var(--size-2);
-	width: 100%;
-	p{
-		line-height: var(--size-4);
-		text-align: center;
-		padding-top: var(--size-1);
-		padding-left: var(--size-1);
-		padding-right: var(--size-1);
-	}
+	font-size: var(--size-3);
+	line-height: var(--size-4);
+	color: var(--yellow);
+	margin-top: var(--size-6);
 }
 
 #start{
 	margin: auto;
-	margin-top: var(--size-8);
+	margin-top: var(--size-2);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -208,7 +195,6 @@ dialog#game[open] {
 
 #options button{
 	font-size: var(--size-1);
-	letter-spacing: 1.5px;
 	color: var(--navy);
 	background-color: var(--white);
 	min-height: var(--size-5);
@@ -230,7 +216,7 @@ dialog#game[open] {
 #progress-bar-container {
 	width: 100%;
 	height: 10px;
-	background-color: var(--yellow);
+	background-color: var(--light);
 	border-radius: 20px;
 	overflow: hidden;
 	margin-top: var(--size-2);
