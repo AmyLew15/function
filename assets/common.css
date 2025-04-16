@@ -216,12 +216,6 @@ dialog#game[open] {
 	border: 2px solid var(--navy);
 	border-radius: 10px;
 	cursor: pointer;
-	transition: background-color .3s ease;
-}
-
-#options button:active{
-	transform: scale(.5);
-	opacity: .75;
 }
 
 #progress-bar-container {
