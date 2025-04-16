@@ -42,7 +42,7 @@ const renderItems = (data) => {
 		const button = document.createElement("button");
 		button.textContent = `${key.toUpperCase()}: ${value}`;
 
-		button.style.backgroundColor = "#8eb7ff";
+		button.style.backgroundColor = "#FFFFFF";
 		// button.style.opacity = "1";
 		// button.style.transform = "scale(1)";
 

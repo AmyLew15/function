@@ -14,7 +14,7 @@
 	/* Main colors */
 	--black: #000000;
 	--white: #ffffff;
-	--navy: #100638;
+	--navy: #0c0232;
 	--blue: #8eb7ff;
 	--green: #0cb352;
 	--yellow: #ffc800;
@@ -55,7 +55,7 @@ h1{
 h2{
 	font-family: var(--font-1);
 	font-size: var(--size-4);
-	font-weight: 200;
+	font-weight: 500;
 	color: var(--pink);
 	line-height: var(--size-4);
 	text-align: center;
@@ -66,7 +66,7 @@ h3{
 	font-size: var(--size-1);
 	color: var(--green);
 	line-height: var(--size-2);
-	font-weight: 200;
+	font-weight: 500;
 	text-align: center;
 }
 
@@ -76,7 +76,7 @@ p{
 	color: var(--white);
 	line-height: var(--size-2);
 	letter-spacing: 1.5px;
-	font-weight: 200;
+	font-weight: 400;
 	text-align: left;
 }
 
@@ -125,9 +125,9 @@ p{
 .start-button{
 	font-family: var(--font-1);
 	font-size: var(--size-3);
-	font-weight: 500;
+	font-weight: 600;
 	color: var(--navy);
-	background-color: var(--green);
+	background-color: var(--pink);
 	border-radius: 100rem;
 	min-height: var(--size-5);
 	width: 300px;
@@ -191,7 +191,8 @@ dialog#game[open] {
 }
 
 #question{
-	font-size: var(--size-2);
+	font-family: var(--font-1);
+	font-size: var(--size-3);
 	font-weight: 600;
 	color: var(--navy);
 	text-align: center;
@@ -209,7 +210,7 @@ dialog#game[open] {
 	font-size: var(--size-1);
 	letter-spacing: 1.5px;
 	color: var(--navy);
-	background-color: var(--blue);
+	background-color: var(--white);
 	min-height: var(--size-5);
 	padding: var(--size-1);
 	width: 100%;
@@ -243,7 +244,7 @@ dialog#game[open] {
 }
 
 #footer{
-	background-color: var(--pink);
+	background-color: var(--red);
 	padding: var(--size-1);
 	margin-top: auto;
 	overflow: hidden;
