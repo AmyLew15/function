@@ -55,10 +55,9 @@ h1{
 h2{
 	font-family: var(--font-1);
 	font-size: var(--size-4);
-	font-weight: 300;
+	font-weight: 200;
 	color: var(--pink);
 	line-height: var(--size-4);
-	font-weight: 200;
 	text-align: center;
 }
 
@@ -100,6 +99,7 @@ p{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	flex-grow: 1;
 	gap: var(--size-2);
 }
@@ -115,7 +115,6 @@ p{
 
 #start{
 	padding: var(--size-2);
-	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -146,10 +145,12 @@ dialog#game {
 	color: var(--navy);
 	background-color: var(--white);
 	padding: var(--size-2);
-	margin: auto;
+	margin-top: var(--size-2);
+	margin-bottom: var(--size-5);
 	width: 95%;
 	max-width: 500px;
-	height: calc(100dvh*var(--size-6));
+	max-height: 90vh;
+	overflow-y: auto;
 	border: none;
 	border-radius: var(--size-1);
 	display: flex;
@@ -164,10 +165,6 @@ dialog#game {
 
 dialog::backdrop {
 	background: var(--yellow);
-}
-
-#game.show{
-	opacity: 1;
 }
 
 .close-button {
@@ -223,27 +220,6 @@ dialog::backdrop {
 	opacity: .75;
 }
 
-#next {
-	font-family: var(--font-1);
-	font-size: var(--size-2);
-	font-weight: 500;
-	color: var(--navy);
-	background-color: var(--red);
-	padding: var(--size-1);
-	margin-top: var(--size-2);
-	text-align: center;
-	min-height: var(--size-5);
-	width: 100%;
-	border: none;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-#next:active{
-	transform: scale(.95);
-	opacity: .75;
-}
-
 #footer{
 	background-color: var(--pink);
 	padding: var(--size-1);
@@ -276,10 +252,6 @@ dialog::backdrop {
 		background-color: var(--white);
 	}
 
-	#next:hover {
-		background-color: var(--yellow);
-		transition: background-color 0.3s ease;
-	}
 }
 
 @media (max-width: 1440px){
