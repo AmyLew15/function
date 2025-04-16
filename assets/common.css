@@ -94,6 +94,16 @@ p{
 	}
 }
 
+#main-content{
+	padding: var(--size-2);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	gap: var(--size-2);
+}
+
 #instructions{
 	p{
 		text-align: center;
@@ -108,7 +118,7 @@ p{
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -131,12 +141,12 @@ p{
 	opacity: .75;
 }
 
-dialog#game{
+dialog#game {
 	font-family: var(--font-2);
 	color: var(--navy);
 	background-color: var(--white);
 	padding: var(--size-2);
-	margin: var(--size2) auto;
+	margin: auto;
 	width: 95%;
 	max-width: 500px;
 	height: calc(100dvh*var(--size-6));

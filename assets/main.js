@@ -6,9 +6,12 @@ const renderItems = (data) => {
 	const startSection = document.getElementById("start");
 	const questionText = document.getElementById("question");
 	const optionsContainer = document.getElementById("options");
-	const nextButton = document.getElementById("next");
 
 	let currentQuestionIndex = 0;
+
+	//Modal
+	document.getElementById("main-content").style.display = "none";
+	document.getElementById("main-content").style.display = "block";
 
 	//Show Question
 	const showQuestion = () => {
