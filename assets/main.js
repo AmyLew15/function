@@ -98,10 +98,11 @@ const renderItems = (data) => {
 };
 
 // Fetch gets your (local) JSON file…
+//Jonathan helped me with randomizing data
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 fetch('assets/data.json')
 	.then(response => response.json())
 	.then(data => {
 		// And passes the data to the function, above!
-		renderItems(data)
+		renderItems(data.sort(() => Math.random() - 0.5));
 	});
