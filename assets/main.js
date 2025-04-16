@@ -3,9 +3,9 @@ const renderItems = (data) => {
 	const startButton = document.querySelector(".start-button");
 	const closeButton = document.getElementById("close-game");
 	const gameDialog = document.getElementById("game");
-	console.log(gameDialog);
 	const mainContent = document.getElementById("main-content");
 	const questionText = document.getElementById("question");
+	const progressCount = document.getElementById ("progress-count");
 	const optionsContainer = document.getElementById("options");
 	const progressBar = document.getElementById("progress-bar");
 
@@ -17,6 +17,7 @@ const renderItems = (data) => {
 		const progress = ((currentQuestionIndex) / data.length) * 100;
 		progressBar.style.width = `${progress}%`;
 		const item = data[currentQuestionIndex];
+		progressCount.textContent = `Question ${currentQuestionIndex + 1} of ${data.length}`;
 		const question = item.Question;
 		const options = {
 			a: item.Option_A,
@@ -102,5 +103,5 @@ fetch('assets/data.json')
 	.then(response => response.json())
 	.then(data => {
 		// And passes the data to the function, above!
-		renderItems(data.sort(() => Math.random() - 0.5));
+		renderItems(data.sort(() => Math.random() - 0.5).slice(0,10));
 	});

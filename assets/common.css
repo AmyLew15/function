@@ -158,23 +158,30 @@ dialog#game[open] {
 	gap: var(--size-1);
 }
 
+#modal-header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: var(--size-1);
+}
+
+#progress-count {
+	font-family: var(--font-1);
+	font-size: var(--size-3);
+	font-weight: 600;
+	color: var(--navy);
+}
+
 .close-button {
 	font-family: var(--font-1);
 	font-size: var(--size-3);
 	font-weight: 600;
 	color: var(--navy);
 	min-height: var(--size-5);
-	position: absolute;
-	top: var(--size-1);
-	right: var(--size-1);
 	background: none;
 	border: none;
 	cursor: pointer;
-}
-
-.close-button:active{
-	transform: scale(.95);
-	opacity: .75;
 }
 
 #question{
