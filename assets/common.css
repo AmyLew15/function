@@ -152,14 +152,20 @@ dialog#game {
 	overflow-y: auto;
 	border: none;
 	border-radius: var(--size-1);
-	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
 	gap: var(--size-1);
 	position: relative;
-	display: none;
 	transition: opacity .5s ease;
+}
+
+dialog#game[open] {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: var(--size-1);
 }
 
 .close-button {
