@@ -218,6 +218,14 @@ dialog#game[open] {
 	cursor: pointer;
 }
 
+.correct {
+	background-color: var(--green);
+}
+
+.incorrect {
+	background-color: var(--red);
+}
+
 #progress-bar-container {
 	width: 100%;
 	height: 10px;

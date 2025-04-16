@@ -42,6 +42,10 @@ const renderItems = (data) => {
 		const button = document.createElement("button");
 		button.textContent = `${key.toUpperCase()}: ${value}`;
 
+		button.style.backgroundColor = "";
+		button.style.opacity = "1";
+		button.style.transform = "scale(1)";
+
 		button.addEventListener("click", () => {
 			const isCorrect = key === correctLetter;
 			button.style.backgroundColor = isCorrect ? "#0cb352" : "#e60c2d";
