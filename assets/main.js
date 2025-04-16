@@ -25,7 +25,7 @@ const renderItems = (data) => {
 			d: item.Option_D,
 		};
 
-	//Correct Answer
+	//Show correct Answer
 		let correctLetter = null;
 		for (const [key, value] of Object.entries(options)) {
 			if (value === item.Answer) {
@@ -33,7 +33,7 @@ const renderItems = (data) => {
 			}
 		}
 
-	//Connect question
+	//Connect question to modal
 		questionText.textContent = question;
 		optionsContainer.innerHTML = "";
 
@@ -43,8 +43,6 @@ const renderItems = (data) => {
 		button.textContent = `${key.toUpperCase()}: ${value}`;
 
 		button.style.backgroundColor = "#FFFFFF";
-		// button.style.opacity = "1";
-		// button.style.transform = "scale(1)";
 
 		button.addEventListener("click", () => {
 			const isCorrect = key === correctLetter;
@@ -70,7 +68,7 @@ const renderItems = (data) => {
 }
 };
 
-	//Game end
+	//Game end state
 		const endGame = () => {
 		optionsContainer.innerHTML = "";
 		progressBar.style.width = `100%`;
