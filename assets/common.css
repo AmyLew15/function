@@ -132,7 +132,6 @@ p{
 	width: 300px;
 	padding: var(--size-1);
 	text-align: center;
-	justify-content: space-between;
 }
 
 .start-button:active{
