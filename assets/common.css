@@ -205,6 +205,8 @@ dialog#game[open] {
 	color: var(--navy);
 	text-align: center;
 	padding: var(--size-2);
+	text-wrap: pretty;
+	overflow-wrap: break-word;
 }
 
 #options{
@@ -234,6 +236,21 @@ dialog#game[open] {
 #options button.option-incorrect {
 	color: var(--white);
 	background-color: var(--red);
+}
+
+.restart-button {
+	font-family: var(--font-1);
+	font-size: var(--size-2);
+	font-weight: 600;
+	color: var(--navy);
+	background-color: var(--yellow);
+	border-radius: 100rem;
+	padding: var(--size-1);
+	width: 80%;
+	margin-top: var(--size-2);
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 #footer{

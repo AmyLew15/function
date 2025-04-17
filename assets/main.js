@@ -8,6 +8,8 @@ const renderItems = (data) => {
 	const progressBar = document.getElementById("progress-bar");
 	const questionText = document.getElementById("question");
 	const optionsContainer = document.getElementById("options");
+	const restartButton = document.getElementById("restart-button");
+	const endScreen = document.getElementById("end-screen");
 
 
 	let currentQuestionIndex = 0;
@@ -15,6 +17,7 @@ const renderItems = (data) => {
 
 	//Show Question
 	const showQuestion = () => {
+		endScreen.hidden = true;
 		const progress = ((currentQuestionIndex) / data.length) * 100;
 		progressBar.style.width = `${progress}%`;
 		const item = data[currentQuestionIndex];
@@ -76,6 +79,7 @@ const renderItems = (data) => {
 		const endGame = () => {
 		optionsContainer.innerHTML = "";
 		progressBar.style.width = `100%`;
+		endScreen.hidden = false;
 		if (score >= 8) {
 		questionText.textContent = `Success! 🎉 You got ${score} out of ${data.length} correct.`;
 		} else {
@@ -96,6 +100,14 @@ const renderItems = (data) => {
 	closeButton.addEventListener("click", () => {
 		gameDialog.close();
 		mainContent.style.display = "flex";
+	});
+
+	//Restart button click
+	restartButton.addEventListener("click", () => {
+		endScreen.hidden = true;
+		currentQuestionIndex = 0;
+		score = 0;
+		showQuestion();
 	});
 };
 
