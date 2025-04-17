@@ -226,14 +226,14 @@ dialog#game[open] {
 	cursor: pointer;
 }
 
-.correct {
+#options button.option-correct {
 	color: var(--white);
 	background-color: var(--green);
 }
 
-.incorrect {
-	background-color: var(--red);
+#options button.option-incorrect {
 	color: var(--white);
+	background-color: var(--red);
 }
 
 #footer{

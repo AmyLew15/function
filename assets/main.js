@@ -50,7 +50,8 @@ const renderItems = (data) => {
 
 	//Adding feedback to options
 		button.textContent += isCorrect ? " Correct!" : " Nope!";
-			if (isCorrect) { score++;
+			if (isCorrect) { 
+				score++;
 		}
 
 	//Disable answer buttons
@@ -74,8 +75,6 @@ const renderItems = (data) => {
 	//Game end state
 		const endGame = () => {
 		optionsContainer.innerHTML = "";
-		feedback.textContent = "";
-		feedback.className = "";
 		progressBar.style.width = `100%`;
 		if (score >= 8) {
 		questionText.textContent = `Success! 🎉 You got ${score} out of ${data.length} correct.`;
