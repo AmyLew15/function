@@ -1,13 +1,14 @@
 // Function to render your items
 const renderItems = (data) => {
 	const startButton = document.querySelector(".start-button");
-	const closeButton = document.getElementById("close-game");
 	const gameDialog = document.getElementById("game");
 	const mainContent = document.getElementById("main-content");
-	const questionText = document.getElementById("question");
 	const progressCount = document.getElementById ("progress-count");
-	const optionsContainer = document.getElementById("options");
+	const closeButton = document.getElementById("close-game");
 	const progressBar = document.getElementById("progress-bar");
+	const questionText = document.getElementById("question");
+	const optionsContainer = document.getElementById("options");
+
 
 	let currentQuestionIndex = 0;
 	let score = 0;
@@ -17,7 +18,7 @@ const renderItems = (data) => {
 		const progress = ((currentQuestionIndex) / data.length) * 100;
 		progressBar.style.width = `${progress}%`;
 		const item = data[currentQuestionIndex];
-		progressCount.textContent = `Question ${currentQuestionIndex + 1} of ${data.length}`;
+		progressCount.textContent = ` ${currentQuestionIndex + 1} / ${data.length}`;
 		const question = item.Question;
 		const options = {
 			a: item.Option_A,
@@ -43,13 +44,14 @@ const renderItems = (data) => {
 		const button = document.createElement("button");
 		button.textContent = `${key.toUpperCase()}: ${value}`;
 
-		button.style.backgroundColor = "#FFFFFF";
-
 		button.addEventListener("click", () => {
 			const isCorrect = key === correctLetter;
-			button.style.backgroundColor = isCorrect ? "#0cb352" : "#e60c2d";
-			if (isCorrect) score++;
+			button.classList.add(isCorrect ? "option-correct" : "option-incorrect");
 
+	//Adding feedback to options
+		button.textContent += isCorrect ? " Correct!" : " Nope!";
+			if (isCorrect) { score++;
+		}
 
 	//Disable answer buttons
 		Array.from(optionsContainer.children).forEach(btn => btn.disabled = true);
@@ -72,8 +74,10 @@ const renderItems = (data) => {
 	//Game end state
 		const endGame = () => {
 		optionsContainer.innerHTML = "";
+		feedback.textContent = "";
+		feedback.className = "";
 		progressBar.style.width = `100%`;
-		if (score >= 6) {
+		if (score >= 8) {
 		questionText.textContent = `Success! 🎉 You got ${score} out of ${data.length} correct.`;
 		} else {
 		questionText.textContent = `Try again! 😬 You got ${score} out of ${data.length}.`;
