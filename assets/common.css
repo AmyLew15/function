@@ -80,17 +80,20 @@ p{
 }
 
 #main-content{
-	font-size: var(--size-2);
-	line-height: var(--size-3);
-	color: var(--white);
-	padding: var(--size-2);
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	flex-grow: 1;
-	text-align: center;
 	gap: var(--size-1);
+}
+
+#introduction{
+	font-size: var(--size-2);
+	line-height: var(--size-3);
+	color: var(--white);
+	padding: var(--size-2);
+	text-align: center;
 }
 
 #instructions{
@@ -270,7 +273,7 @@ button.option-incorrect {
 	overflow: hidden;
 }
 
-#footer h1{
+#footer p{
 		color: var(--navy);
 		font-size: var(--size-1);
 		line-height: var(--size-3);
