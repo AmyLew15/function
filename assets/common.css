@@ -89,7 +89,7 @@ p{
 	flex-direction: column;
 	align-items: center;
 	flex-grow: 1;
-	text-align: left;
+	text-align: center;
 	gap: var(--size-1);
 }
 
@@ -221,16 +221,44 @@ button.option-incorrect {
 	background-color: var(--red);
 }
 
+#end-screen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: var(--size-2);
+}
+
+.result-heading {
+	font-family: var(--font-1);
+	font-size: var(--size-4);
+	font-weight: 600;
+	color: var(--yellow);
+	margin-bottom: var(--size-1);
+	text-align: center;
+	text-wrap: pretty;
+}
+
+.result-message {
+	font-family: var(--font-2);
+	font-size: var(--size-2);
+	color: var(--white);
+	text-align: center;
+	line-height: var(--size-3);
+	text-wrap: pretty;
+}
+
 .restart-button {
 	font-family: var(--font-1);
 	font-size: var(--size-3);
 	font-weight: 600;
 	color: var(--navy);
 	background-color: var(--yellow);
+	padding: var(--size-1);
+	margin: var(--size-1);
 	border-radius: 100rem;
 	min-height: var(--size-5);
-	width: 300px;
-	padding: var(--size-1);
+	width: 100%;
 	text-align: center;
 	cursor: pointer;
 }
@@ -249,11 +277,18 @@ button.option-incorrect {
 	}
 
 
+@media (min-width: 650px){
+	h1{
+		font-size: var(--size-7);
+		line-height: var(--size-7);
+	}
+}
+
 @media (min-width: 768px){
 	h1{
-		 font-size: var(--size-7);
-		 line-height: var(--size-7);
-		}
+		font-size: var(--size-7);
+		line-height: var(--size-7);
+	}
 
 	h2{
 		font-size: var(--size-5);
@@ -276,13 +311,6 @@ button.option-incorrect {
 		font-size: var(--size-4);
 		margin-bottom: var(--size-5);
 	}
-	#progress-count{ 
-		font-size: var(--size-3);
-	}
-
-	.close-button{
-		font-size: var(--size-3);
-	}
 
 	#question {
 	font-size: var(--size-4);
@@ -293,12 +321,19 @@ button.option-incorrect {
 		font-size: var(--size-3);
 	}
 
+	.result-message{
+		font-size: var(--size-3);
+	}
+
+	.restart-button{
+		max-width: 350px;
+	}
 }
 
 @media (min-width: 1024px){
 
 	h1{
-		font-size: var(--size-9);
+		font-size: var(--size-8);
 		line-height: var(--size-8);
 	}
 
@@ -320,9 +355,17 @@ button.option-incorrect {
 		margin-bottom: var(--size-2);
 	}
 
+	#progress-count {
+		font-size: var(--size-4);
+	}
+	
+	.close-button {
+		font-size: var(--size-4);
+	}
+
 	#question {
-	font-size: var(--size-4);
-	padding: var(--size-3);
+		font-size: var(--size-4);
+		padding: var(--size-3);
 	}
 
 	#options button{

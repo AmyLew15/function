@@ -79,11 +79,10 @@ const renderItems = (data) => {
 		optionsContainer.innerHTML = "";
 		progressBar.style.width = `100%`;
 		endScreen.hidden = false;
-		if (score >= 8) {
-		questionText.textContent = `Wow you know our class! 🎉 You got ${score} out of ${data.length} correct.`;
-		} else {
-		questionText.textContent = `Rats! Try again! 😬 You got ${score} out of ${data.length} correct.`;
-	}
+		questionText.innerHTML = `
+		<h3 class="result-heading">${score >= 8 ? "Wow you know our class! 🎉" : "Rats! Try again! 😬"}</h3>
+		<p class="result-message">You got ${score} out of ${data.length} correct.</p>
+	`;
 };
 
 	// Start button click
