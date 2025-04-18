@@ -81,9 +81,9 @@ const renderItems = (data) => {
 		progressBar.style.width = `100%`;
 		endScreen.hidden = false;
 		if (score >= 8) {
-		questionText.textContent = `Success! 🎉 You got ${score} out of ${data.length} correct.`;
+		questionText.textContent = `Wow you know our class! 🎉 You got ${score} out of ${data.length} correct.`;
 		} else {
-		questionText.textContent = `Try again! 😬 You got ${score} out of ${data.length}.`;
+		questionText.textContent = `Rats! Try again! 😬 You got ${score} out of ${data.length} correct.`;
 	}
 };
 

@@ -14,7 +14,6 @@
 	/* Main colors */
 	--black: #000000;
 	--white: #ffffff;
-	--light: #d8d8d8;
 	--navy: #0b022e;
 	--blue: #81adf9;
 	--green: #0cb352;
@@ -46,11 +45,12 @@ body{
 
 h1{
 	font-family: var(--font-1);
-	font-size: var(--size-5);
+	font-size: var(--size-6);
 	font-weight: 500;
 	color: var(--red);
-	line-height: var(--size-5);
+	line-height: var(--size-6);
 	text-align: center;
+	text-wrap: pretty;
 }
 
 h2{
@@ -60,11 +60,13 @@ h2{
 	color: var(--pink);
 	line-height: var(--size-4);
 	text-align: center;
+	text-wrap: pretty;
 }
 
 p{
 	font-family: var(--font-2);
 	font-weight: 400;
+	text-wrap: pretty;
 }
 
 #header{
@@ -90,20 +92,19 @@ p{
 	flex-direction: column;
 	align-items: center;
 	flex-grow: 1;
-	text-align: center;
-	gap: var(--size-2);
+	text-align: left;
+	gap: var(--size-1);
 }
 
 #instructions{
 	font-size: var(--size-3);
-	line-height: var(--size-4);
-	color: var(--yellow);
-	margin-top: var(--size-6);
+	line-height: calc(1.5*var(--size-2));
+	color: var(--pink);
+	margin-top: var(--size-7);
+	text-align: center;
 }
 
 #start{
-	margin: auto;
-	margin-top: var(--size-2);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -114,7 +115,7 @@ p{
 	font-size: var(--size-3);
 	font-weight: 600;
 	color: var(--navy);
-	background-color: var(--pink);
+	background-color: var(--yellow);
 	border-radius: 100rem;
 	min-height: var(--size-5);
 	width: 300px;
@@ -122,22 +123,17 @@ p{
 	text-align: center;
 }
 
-.start-button:active{
-	transform: scale(.95);
-	opacity: .75;
-}
-
 dialog#game {
 	font-family: var(--font-2);
-	color: var(--navy);
-	background-color: var(--white);
+	background-color: var(--navy);
 	padding: var(--size-2);
 	margin: 0;
 	width: 95%;
 	max-width: 500px;
 	max-height: 90vh;
 	overflow-y: auto;
-	border: none;
+	border: 2px solid;
+	border-color: var(--white);
 	border-radius: var(--size-1);
 	flex-direction: column;
 	align-items: center;
@@ -169,14 +165,14 @@ dialog#game[open] {
 	font-family: var(--font-1);
 	font-size: var(--size-3);
 	font-weight: 600;
-	color: var(--navy);
+	color: var(--pink);
 }
 
 .close-button {
 	font-family: var(--font-1);
 	font-size: var(--size-3);
 	font-weight: 600;
-	color: var(--navy);
+	color: var(--pink);
 	min-height: var(--size-5);
 	background: none;
 	border: none;
@@ -186,7 +182,7 @@ dialog#game[open] {
 #progress-bar-container {
 	width: 100%;
 	height: 10px;
-	background-color: var(--light);
+	background-color: var(--white);
 	border-radius: 20px;
 	overflow: hidden;
 }
@@ -202,9 +198,9 @@ dialog#game[open] {
 	font-family: var(--font-1);
 	font-size: var(--size-3);
 	font-weight: 600;
-	color: var(--navy);
+	color: var(--blue);
 	text-align: center;
-	padding: var(--size-2);
+	padding: var(--size-1);
 	text-wrap: pretty;
 	overflow-wrap: break-word;
 }
@@ -212,18 +208,18 @@ dialog#game[open] {
 #options{
 	display: flex;
 	flex-direction: column;
-	gap: var(--size-1);
+	gap: var(--size-2);
 	width: 100%;
 }
 
 #options button{
 	font-size: var(--size-1);
-	color: var(--navy);
-	background-color: var(--white);
+	color: var(--white);
+	background-color: var(--navy);
 	min-height: var(--size-5);
 	padding: var(--size-1);
 	width: 100%;
-	border: 2px solid var(--navy);
+	border: 2px solid var(--white);
 	border-radius: 10px;
 	cursor: pointer;
 }
@@ -238,23 +234,28 @@ dialog#game[open] {
 	background-color: var(--red);
 }
 
+.end-screen{
+	p{
+		font-family: var(--font-2);
+		color: var(--white);
+	}
+}
 .restart-button {
 	font-family: var(--font-1);
-	font-size: var(--size-2);
+	font-size: var(--size-3);
 	font-weight: 600;
 	color: var(--navy);
 	background-color: var(--yellow);
 	border-radius: 100rem;
+	min-height: var(--size-5);
+	width: 300px;
 	padding: var(--size-1);
-	width: 80%;
-	margin-top: var(--size-2);
-	border: none;
+	text-align: center;
 	cursor: pointer;
-	transition: background-color 0.3s ease;
 }
 
 #footer{
-	background-color: var(--red);
+	background-color: var(--blue);
 	padding: var(--size-1);
 	margin-top: auto;
 	overflow: hidden;
