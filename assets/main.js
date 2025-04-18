@@ -47,12 +47,11 @@ const renderItems = (data) => {
 		const button = document.createElement("button");
 		button.textContent = `${key.toUpperCase()}: ${value}`;
 
+	//button feedback
 		button.addEventListener("click", () => {
-			const isCorrect = key === correctLetter;
-			button.classList.add(isCorrect ? "option-correct" : "option-incorrect");
-
-	//Adding feedback to options
-		button.textContent += isCorrect ? " Correct!" : " Nope!";
+		const isCorrect = key === correctLetter;
+		button.textContent = `${key.toUpperCase()}: ${value}` + (isCorrect ? " Correct!" : " Nope!");
+		button.classList.add(isCorrect ? "option-correct" : "option-incorrect");
 			if (isCorrect) { 
 				score++;
 		}

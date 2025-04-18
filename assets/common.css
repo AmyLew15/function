@@ -215,7 +215,6 @@ dialog#game[open] {
 #options button{
 	font-size: var(--size-1);
 	color: var(--white);
-	background-color: var(--navy);
 	min-height: var(--size-5);
 	padding: var(--size-1);
 	width: 100%;
@@ -224,12 +223,12 @@ dialog#game[open] {
 	cursor: pointer;
 }
 
-#options button.option-correct {
+button.option-correct {
 	color: var(--white);
 	background-color: var(--green);
 }
 
-#options button.option-incorrect {
+button.option-incorrect {
 	color: var(--white);
 	background-color: var(--red);
 }
