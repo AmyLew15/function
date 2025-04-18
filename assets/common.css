@@ -249,7 +249,7 @@ button.option-incorrect {
 	}
 
 
-@media (max-width: 768px){
+@media (min-width: 768px){
 	h1{
 		 font-size: var(--size-7);
 		 line-height: var(--size-7);
@@ -295,7 +295,7 @@ button.option-incorrect {
 
 }
 
-@media (max-width: 1024px){
+@media (min-width: 1024px){
 
 	h1{
 		font-size: var(--size-9);
