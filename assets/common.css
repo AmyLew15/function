@@ -59,6 +59,7 @@ h2{
 	font-weight: 500;
 	color: var(--pink);
 	line-height: var(--size-4);
+	padding-top: var(--size-1);
 	text-align: center;
 	text-wrap: pretty;
 }
@@ -70,16 +71,12 @@ p{
 }
 
 #header{
-	margin-top: var(--size-1);
 	padding: var(--size-2);
+	margin-top: var(--size-1);
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	
-	h2{
-		padding-top: var(--size-1);
-	}
 }
 
 #main-content{
@@ -98,7 +95,7 @@ p{
 
 #instructions{
 	font-size: var(--size-3);
-	line-height: calc(1.5*var(--size-2));
+	line-height: var(--size-4);
 	color: var(--pink);
 	margin-top: var(--size-7);
 	text-align: center;
@@ -127,16 +124,14 @@ dialog#game {
 	font-family: var(--font-2);
 	background-color: var(--navy);
 	padding: var(--size-2);
-	margin: 0;
 	width: 95%;
 	max-width: 500px;
 	max-height: 90vh;
 	overflow-y: auto;
-	border: 2px solid;
-	border-color: var(--white);
+	border: 2px solid var(--white);
 	border-radius: var(--size-1);
-	flex-direction: column;
 	align-items: center;
+	flex-direction: column;
 	justify-content: flex-start;
 	gap: var(--size-1);
 	position: fixed;
@@ -146,15 +141,8 @@ dialog#game {
 	z-index: 10;
 }
 
-dialog#game[open] {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	gap: var(--size-1);
-}
-
 #modal-header {
+	padding-bottom: var(--size-1);
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -197,10 +185,10 @@ dialog#game[open] {
 #question{
 	font-family: var(--font-1);
 	font-size: var(--size-3);
-	font-weight: 600;
+	font-weight: 500;
 	color: var(--blue);
-	text-align: center;
 	padding: var(--size-1);
+	text-align: left;
 	text-wrap: pretty;
 	overflow-wrap: break-word;
 }
@@ -233,12 +221,6 @@ button.option-incorrect {
 	background-color: var(--red);
 }
 
-.end-screen{
-	p{
-		font-family: var(--font-2);
-		color: var(--white);
-	}
-}
 .restart-button {
 	font-family: var(--font-1);
 	font-size: var(--size-3);
@@ -258,21 +240,97 @@ button.option-incorrect {
 	padding: var(--size-1);
 	margin-top: auto;
 	overflow: hidden;
-	h1{
+}
+
+#footer h1{
 		color: var(--navy);
 		font-size: var(--size-1);
 		line-height: var(--size-3);
 	}
-}
+
 
 @media (max-width: 768px){
+	h1{
+		 font-size: var(--size-7);
+		 line-height: var(--size-7);
+		}
+
+	h2{
+		font-size: var(--size-5);
+		padding-top: var(--size-3);
+	}
+
+	#main-content{
+		font-size: var(--size-3);
+		line-height: var(--size-4);
+		text-align: center;
+	}
+
+	#instructions{
+		font-size: var(--size-4);
+		line-height: calc(1.5*var(--size-4));
+		margin-bottom: var(--size-2);
+	}
+
+	.start-button {
+		font-size: var(--size-4);
+		margin-bottom: var(--size-5);
+	}
+	#progress-count{ 
+		font-size: var(--size-3);
+	}
+
+	.close-button{
+		font-size: var(--size-3);
+	}
+
+	#question {
+	font-size: var(--size-4);
+	padding: var(--size-3);
+	}
+
+	#options button{
+		font-size: var(--size-3);
+	}
 
 }
 
 @media (max-width: 1024px){
 
+	h1{
+		font-size: var(--size-9);
+		line-height: var(--size-8);
+	}
+
+	h2{
+		font-size: var(--size-6);
+		padding-top: var(--size-4);
+	}
+
+	#main-content{
+		font-size: var(--size-3);
+		line-height: var(--size-4);
+		text-align: center;
+		margin: var(--size-2)
+	}
+
+	#instructions{
+		font-size: var(--size-4);
+		line-height: calc(1.5*var(--size-4));
+		margin-bottom: var(--size-2);
+	}
+
+	#question {
+	font-size: var(--size-4);
+	padding: var(--size-3);
+	}
+
+	#options button{
+		font-size: var(--size-3);
+	}
+
 	.start-button:hover{
-		background-color: var(--yellow);
+		background-color: var(--white);
 		transition: 500ms ease-in-out;
 	}
 
@@ -282,11 +340,7 @@ button.option-incorrect {
 	}
 
 	#options button:hover{
+		color: var(--navy);
 		background-color: var(--white);
 	}
-
-}
-
-@media (max-width: 1440px){
-
 }
