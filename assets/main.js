@@ -17,9 +17,10 @@ const renderItems = (data) => {
 
 	//Show Question
 	const showQuestion = () => {
-		endScreen.hidden = true;
+		endScreen.style.display = "none";
 		const progress = ((currentQuestionIndex) / data.length) * 100;
 		progressBar.style.width = `${progress}%`;
+
 		const item = data[currentQuestionIndex];
 		progressCount.textContent = ` ${currentQuestionIndex + 1} / ${data.length}`;
 		const question = item.Question;
@@ -78,7 +79,7 @@ const renderItems = (data) => {
 		const endGame = () => {
 		optionsContainer.innerHTML = "";
 		progressBar.style.width = `100%`;
-		endScreen.hidden = false;
+		endScreen.style.display = "flex";
 		questionText.innerHTML = `
 		<h3 class="result-heading">${score >= 8 ? "Wow you know our class! 🎉" : "Rats! Try again! 😬"}</h3>
 		<p class="result-message">You got ${score} out of ${data.length} correct.</p>
@@ -102,7 +103,7 @@ const renderItems = (data) => {
 
 	//Restart button click
 	restartButton.addEventListener("click", () => {
-		endScreen.hidden = true;
+		endScreen.style.display = "none";
 		currentQuestionIndex = 0;
 		score = 0;
 		showQuestion();

@@ -401,11 +401,16 @@ button.option-incorrect {
 	}
 
 	.close-button:hover {
-		color: var(--red);
+		color: var(--white);
 		transition: color 0.3s ease;
 	}
 
 	#options button:hover{
+		color: var(--navy);
+		background-color: var(--white);
+	}
+
+	.restart-button:hover {
 		color: var(--navy);
 		background-color: var(--white);
 	}
