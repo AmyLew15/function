@@ -90,7 +90,7 @@ const renderItems = (data) => {
 
 	//Outlining Text paired with outcome
 	const resultAlt = isSuccess ? "Cowboy" : "Rat";
-	const resultText = isSuccess ? "Wow you know our class!" : "Rats! Try again!";
+	const resultText = isSuccess ? "Wow you know our class!" : "Rats you don't know our class!";
 
 	//Reflected in Modal
 	questionText.innerHTML = `

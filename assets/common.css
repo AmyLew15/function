@@ -88,7 +88,7 @@ h1{
 	color: var(--red);
 	line-height: var(--size-6);
 	text-align: center;
-	text-wrap: pretty;
+	text-wrap: balance;
 }
 
 h2{
@@ -99,13 +99,13 @@ h2{
 	line-height: var(--size-4);
 	padding-top: var(--size-1);
 	text-align: center;
-	text-wrap: pretty;
+	text-wrap: balance;
 }
 
 p{
 	font-family: var(--font-2);
 	font-weight: 400;
-	text-wrap: pretty;
+	text-wrap: balance;
 }
 
 #header{
@@ -123,7 +123,7 @@ p{
 	line-height: var(--size-4);
 	padding: var(--size-3);
 	text-align: center;
-	text-wrap: pretty;
+	text-wrap: balance;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -139,7 +139,7 @@ p{
 	color: var(--pink);
 	margin-top: var(--size-4);
 	text-align: center;
-	text-wrap: pretty;
+	text-wrap: balance;
 }
 
 #start{
@@ -231,7 +231,7 @@ dialog#game {
 	margin-top: var(--size-3);
 	margin-bottom: var(--size-2);
 	text-align: left;
-	text-wrap: pretty;
+	text-wrap: balance;
 	overflow-wrap: break-word;
 }
 
@@ -277,7 +277,7 @@ button.option-incorrect {
 	font-weight: 600;
 	color: var(--yellow);
 	text-align: center;
-	text-wrap: pretty;
+	text-wrap: balance;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -298,7 +298,7 @@ button.option-incorrect {
 	color: var(--white);
 	text-align: center;
 	line-height: var(--size-4);
-	text-wrap: pretty;
+	text-wrap: balance;
 }
 
 .restart-button {
@@ -402,8 +402,14 @@ button.option-incorrect {
 		font-size: var(--size-5);
 	}
 
+	.result-icon {
+		width: 120px;
+		height: 120px;
+	}
+
 	.result-message{
-		font-size: var(--size-3);
+		font-size: var(--size-4);
+		line-height: var(--size-5);
 	}
 
 	.restart-button{
