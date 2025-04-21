@@ -236,9 +236,20 @@ button.option-incorrect {
 	font-size: var(--size-4);
 	font-weight: 600;
 	color: var(--yellow);
-	margin-bottom: var(--size-1);
 	text-align: center;
 	text-wrap: pretty;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.result-icon {
+	width: 90px;
+	height: 90px;
+	object-fit: contain;
+	vertical-align: middle;
 }
 
 .result-message {
@@ -246,7 +257,7 @@ button.option-incorrect {
 	font-size: var(--size-2);
 	color: var(--white);
 	text-align: center;
-	line-height: var(--size-3);
+	line-height: var(--size-4);
 	text-wrap: pretty;
 }
 

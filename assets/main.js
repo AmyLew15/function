@@ -1,4 +1,4 @@
-// Function to render your items
+// Function to render your items in order of appearance
 const renderItems = (data) => {
 	const startButton = document.querySelector(".start-button");
 	const gameDialog = document.getElementById("game");
@@ -21,6 +21,7 @@ const renderItems = (data) => {
 		const progress = ((currentQuestionIndex) / data.length) * 100;
 		progressBar.style.width = `${progress}%`;
 
+		//Matches data from JSON to appear as organized options
 		const item = data[currentQuestionIndex];
 		progressCount.textContent = ` ${currentQuestionIndex + 1} / ${data.length}`;
 		const question = item.Question;
@@ -31,7 +32,7 @@ const renderItems = (data) => {
 			d: item.Option_D,
 		};
 
-	//Show correct Answer
+	//Understands correct answer to assigned question
 		let correctLetter = null;
 		for (const [key, value] of Object.entries(options)) {
 			if (value === item.Answer) {
@@ -48,7 +49,7 @@ const renderItems = (data) => {
 		const button = document.createElement("button");
 		button.textContent = `${key.toUpperCase()}: ${value}`;
 
-	//button feedback
+	//button feedback from being clicked
 		button.addEventListener("click", () => {
 		const isCorrect = key === correctLetter;
 		button.textContent = `${key.toUpperCase()}: ${value}` + (isCorrect ? " Correct!" : " Nope!");
@@ -57,10 +58,10 @@ const renderItems = (data) => {
 				score++;
 		}
 
-	//Disable answer buttons
+	//Disable answer buttons to allow for only one clicked option at a time
 		Array.from(optionsContainer.children).forEach(btn => btn.disabled = true);
 
-	//Auto next question
+	//Auto next question after answer is shown
 		setTimeout(() => {
 			currentQuestionIndex++;
 			if (currentQuestionIndex < data.length) {
@@ -75,13 +76,28 @@ const renderItems = (data) => {
 }
 };
 
-	//Game end state
+	//Game end state in modal
 		const endGame = () => {
 		optionsContainer.innerHTML = "";
 		progressBar.style.width = `100%`;
 		endScreen.style.display = "flex";
-		questionText.innerHTML = `
-		<h3 class="result-heading">${score >= 8 ? "Wow you know our class! 🎉" : "Rats! Try again! 😬"}</h3>
+
+	//Outcome that is successful
+	const isSuccess = score >= 8;
+
+	//Outlining Image paired with outcome
+		const resultImage = isSuccess ? "assets/Cowboy-pixel.png" : "assets/Rat-pixel.png";
+
+	//Outlining Text paired with outcome
+	const resultAlt = isSuccess ? "Cowboy" : "Rat";
+	const resultText = isSuccess ? "Wow you know our class!" : "Rats! Try again!";
+
+	//Reflected in Modal
+	questionText.innerHTML = `
+		<h3 class="result-heading">
+			${resultText}
+			<img src="${resultImage}" alt="${resultAlt}" class="result-icon"/>
+		</h3>
 		<p class="result-message">You got ${score} out of ${data.length} correct.</p>
 	`;
 };
