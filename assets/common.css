@@ -64,13 +64,13 @@ body{
 .pixel-1 { top: 5%; left: 10%; animation-delay: 0s; }
 .pixel-2 { top: 10%; left: 90%; animation-delay: 0.4s; }
 .pixel-3 { top: 25%; left: 80%; animation-delay: 0.8s; }
-.pixel-4 { top: 30%; left: 15%; animation-delay: 1.2s; }
+.pixel-4 { top: 30%; left: 6%; animation-delay: 1.2s; }
 .pixel-5 { top: 42%; left: 88%; animation-delay: 1.6s; }
-.pixel-6 { top: 58%; left: 32%; animation-delay: 2s; }
-.pixel-7 { top: 66%; left: 84%; animation-delay: 2.4s; }
-.pixel-8 { top: 82%; left: 44%; animation-delay: 2.8s; }
-.pixel-9 { top: 85%; left: 15%; animation-delay: 3.2s; }
-.pixel-10 { top: 90%; left: 85%; animation-delay: 3.6s; }
+.pixel-6 { top: 55%; left: 9%; animation-delay: 2s; }
+.pixel-7 { top: 66%; left: 88%; animation-delay: 2.4s; }
+.pixel-8 { top: 72%; left: 44%; animation-delay: 2.8s; }
+.pixel-9 { top: 80%; left: 12%; animation-delay: 3.2s; }
+.pixel-10 { top: 90%; left: 92%; animation-delay: 3.6s; }
 
 @keyframes blink {
 	0%, 100% {
@@ -158,6 +158,7 @@ p{
 	min-height: var(--size-5);
 	width: 300px;
 	padding: var(--size-1);
+	margin-top: var(--size-2);
 	text-align: center;
 }
 
@@ -326,6 +327,7 @@ button.option-incorrect {
 #footer p{
 		color: var(--navy);
 		font-size: var(--size-1);
+		line-height: var(--size-3);
 		text-align: center;
 	}
 
@@ -344,8 +346,8 @@ button.option-incorrect {
 		width: 12px;
 	}
 
-	.pixel-4{ top: 25%; left: 4%; animation-delay: 1.2s; }
-	.pixel-10 { top: 88%; left: 85%; animation-delay: 3.6s; }
+	.pixel-7 { top: 62%; left: 88%; animation-delay: 2.4s; }
+	.pixel-8 { top: 72%; left: 30%; animation-delay: 2.8s; }
 
 	h1{
 		font-size: var(--size-7);
@@ -429,10 +431,11 @@ button.option-incorrect {
 
 	.pixel-1 { top: 3%; left: 10%; animation-delay: 0s; }
 	.pixel-2{ top: 16%; left: 90%; animation-delay: 0.4s; }
-	.pixel-4{ top: 25%; left: 25%; animation-delay: 1.2s; }
-	.pixel-8 { top: 82%; left: 38%; animation-delay: 2.8s; }
-	.pixel-9 { top: 77%; left: 9%; animation-delay: 3.2s; }
-	.pixel-10 { top: 78%; left: 73%; animation-delay: 3.6s; }
+	.pixel-4{ top: 20%; left: 20%; animation-delay: 1.2s; }
+	.pixel-5 { top: 42%; left: 95%; animation-delay: 1.6s; }
+	.pixel-8 { top: 67%; left: 24%; animation-delay: 2.8s; }
+	.pixel-9 { top: 86%; left: 47%; animation-delay: 3.2s; }
+	.pixel-10 { top: 80%; left: 68%; animation-delay: 3.6s; }
 
 	h1{
 		font-size: var(--size-8);
